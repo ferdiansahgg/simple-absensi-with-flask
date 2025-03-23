@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Online</title>
+</head>
+<body>
+    <h2>Form Absensi</h2>
+    <form method="POST" action="/generate_absen">
+        Nama: <input type="text" name="nama" required><br>
+        Tanggal mulai absen (DD-MM-YYYY): <input type="text" name="tanggal" required><br>
+        Jam Masuk (opsional): <input type="text" name="jam_masuk" placeholder="08.00 AM"><br>
+        Jam Keluar (opsional): <input type="text" name="jam_keluar" placeholder="17.00 PM"><br>
+        Keterangan (opsional): <input type="text" name="keterangan"><br>
+        <button type="submit">Generate Absen</button>
+    </form>
+
+    <hr>
+
+    <h2>Form Lembur</h2>
+    <form method="POST" action="/generate_lembur">
+        Nama: <input type="text" name="nama" required><br>
+        Tanggal lembur (DD-MM-YYYY): <input type="text" name="tanggal_lembur" required><br>
+        Jam Masuk Lembur (opsional): <input type="text" name="jam_masuk_lembur" placeholder="08.00 AM"><br>
+        Jam Keluar Lembur (opsional): <input type="text" name="jam_keluar_lembur" placeholder="17.00 PM"><br>
+        Keterangan (opsional): <input type="text" name="keterangan_lembur"><br>
+        <button type="submit">Generate Lembur</button>
+    </form>
+
+    <hr>
+
+    <h3>Hasil Absen</h3>
+    <pre>{{ result | safe }}</pre>
+
+    {% if filename %}
+    <p><a href="{{ url_for('download', filename=filename) }}" download>Download File</a></p>
+    {% endif %}
+</body>
+</html>
