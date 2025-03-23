@@ -1,0 +1,114 @@
+User Guide (Panduan Penggunaan)
+
+1️⃣ Cara Menjalankan Aplikasi
+
+🏗 Persiapan
+1. Pastikan Python 3.13 sudah terinstall
+Periksa dengan menjalankan perintah:
+  python --version
+
+Jika Python belum ada, install sesuai sistem operasi yang digunakan.
+
+2. Pastikan Flask sudah terinstall
+Cek dengan menjalankan:
+  python -m flask --version
+
+Jika belum ada, install dengan:
+  pacman -S python-flask  # (Untuk Arch/CachyOS)
+
+3. Jalankan aplikasi
+  python app.py
+Output akan menunjukkan bahwa aplikasi berjalan di:
+  Running on http://127.0.0.1:5000/
+  Running on http://192.168.1.8:5000/
+Jika ingin mengakses dari HP atau perangkat lain, gunakan IP yang diberikan (misalnya 192.168.1.8:5000).
+
+2️⃣ Cara Menggunakan Aplikasi
+
+📌 Absensi
+
+1. Buka halaman web melalui browser di PC atau HP.
+
+2. Isi form absensi:
+
+- Nama
+
+- Tanggal mulai absen (format DD-MM-YYYY)
+
+- Jam masuk (opsional)
+
+- Jam keluar (opsional)
+
+- Keterangan (opsional)
+
+3. Klik tombol "Generate Absen".
+
+4. Hasil absensi langsung muncul di halaman web.
+
+5. Klik "Download File" untuk menyimpan data absensi sebagai .txt.
+
+📌 Lembur
+1. Isi form lembur:
+
+- Nama
+
+- Tanggal lembur (format DD-MM-YYYY)
+
+- Jam masuk lembur (opsional)
+
+- Jam keluar lembur (opsional)
+
+- Keterangan lembur (opsional)
+
+3. Klik tombol "Generate Lembur".
+
+4. Hasil lembur langsung muncul di halaman web.
+
+5. Klik "Download File" untuk menyimpan data lembur sebagai .txt.
+
+3️⃣ Cara Mengakses dari HP
+1. Pastikan HP dan PC berada di jaringan Wi-Fi yang sama.
+
+2. Gunakan alamat IP lokal yang ditampilkan di terminal.
+
+- Contoh: Jika terminal menampilkan http://192.168.1.8:5000/, buka alamat itu di browser HP.
+
+3. Gunakan seperti biasa (mengisi form, generate absensi/lembur, dan download file).
+
+Contoh Output File .TXT
+
+Absensi :
+Nama : Ferdiansah
+📆 Kehadiran : Senin 24-03-2025
+⏰ Masuk : 08.00 AM
+🕰 Keluar : 17.00 PM
+📝 Keterangan : Hadir
+
+📆 Kehadiran : Selasa 25-03-2025
+⏰ Masuk : 08.00 AM
+🕰 Keluar : 17.00 PM
+📝 Keterangan : Hadir
+
+Lembur : 
+Nama : Ferdiansah
+📆 Lembur : 23-03-2025
+⏰ Masuk : 19.00 PM
+🕰 Keluar : 23.00 PM
+📝 Keterangan : Lembur proyek
+
+Keunggulan Aplikasi
+✅ Sederhana & Mudah Digunakan – Tidak butuh login atau sistem rumit.
+✅ Mendukung Absensi & Lembur – Bisa mencatat dua jenis kehadiran.
+✅ Format File .txt yang Fleksibel – Bisa dibuka di mana saja.
+✅ Akses dari HP & PC dalam Jaringan Lokal – Tidak perlu server eksternal.
+✅ Bersifat Open Source – Bisa dikembangkan lebih lanjut sesuai kebutuhan.
+
+🚀 Potensi Pengembangan ke Depan
+- 🌍 Dibuat online dengan deployment di server VPS
+
+- 📊 Integrasi dengan database untuk menyimpan riwayat absensi
+
+- 📅 Fitur kalender & notifikasi
+
+- 📥 Export ke format Excel atau PDF
+
