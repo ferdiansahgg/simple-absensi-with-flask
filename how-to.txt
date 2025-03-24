@@ -14,7 +14,8 @@ Cek dengan menjalankan:
   python -m flask --version
 
 Jika belum ada, install dengan:
-  pacman -S python-flask  # (Untuk Arch/CachyOS)
+  pacman -S python-flask  # (Untuk Linux berbasis Arch)
+  pip install Flask  # (Untuk windows)
 
 3. Jalankan aplikasi
   python app.py
@@ -35,9 +36,9 @@ Jika ingin mengakses dari HP atau perangkat lain, gunakan IP yang diberikan (mis
 
 - Tanggal mulai absen (format DD-MM-YYYY)
 
-- Jam masuk (opsional)
+- Jam masuk (opsional), jika default maka diskip saja tidak usah diisi. (nilai default adalah 08.00 AM atau jam 8.00 pagi)
 
-- Jam keluar (opsional)
+- Jam keluar (opsional), jika default maka diskip saja tidak usah diisi. (nilai default adalah 17.00 PM atau jam 17.00 sore)
 
 - Keterangan (opsional)
 
@@ -54,9 +55,9 @@ Jika ingin mengakses dari HP atau perangkat lain, gunakan IP yang diberikan (mis
 
 - Tanggal lembur (format DD-MM-YYYY)
 
-- Jam masuk lembur (opsional)
+- Jam masuk lembur (opsional), jika default maka diskip saja tidak usah diisi. (nilai default adalah 08.00 AM atau jam 8.00 pagi)
 
-- Jam keluar lembur (opsional)
+- Jam keluar lembur (opsional), jika default maka diskip saja tidak usah diisi. (nilai default adalah 17.00 PM atau jam 17.00 sore)
 
 - Keterangan lembur (opsional)
 
